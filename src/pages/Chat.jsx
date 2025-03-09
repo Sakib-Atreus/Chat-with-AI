@@ -60,7 +60,7 @@ const Chat = () => {
           ]);
           setAnswer(aiAnswer);
         } else {
-          setAnswer("No answer received.");
+          setAnswer("No answer received!");
         }
       } else {
         setError(`API Error: ${response.status} - ${response.statusText}`);
@@ -68,7 +68,7 @@ const Chat = () => {
       }
     } catch (err) {
       console.error("Error generating answer:", err);
-      setError(err.message || "An error occurred while generating the answer.");
+      setError(err.message || "An error occurred while generating the answer!");
       setAnswer("");
     } finally {
       setIsLoading(false);
